@@ -1,22 +1,22 @@
-# _Tawnee's Tap House_
+# 🍺 _Tawnee's Tap House_
 
 #### _React Solo Project for Epicodus_
 #### _DATE 02.12.2021_
 
-#### By _**Tawnee Harris**_
+#### ✒️ By _**Tawnee Harris**_
 
-## Description
+## 📋 Description
 
 This application will allow a user to keep track of the kegs in their tap house. New kegs can be added with the number of pints left tracked. Keg details will also be available.
 
-## Setup/Installation Requirements
+## ⚙️ Setup/Installation Requirements
 
 Software Requirements
 * An internet browser of your choice; I prefer Chrome
 * A code editor; I prefer VSCode
 
 Open by Downloading or Cloning
-* Navigate to <GITHUB REPO URL>
+* Navigate to <https://github.com/tawneeh/tawnees-tap-house.git>
 * Download this repository to your computer by clicking the green Code button and 'Download Zip'
 * Or clone the repository
 
@@ -25,19 +25,19 @@ Setup Instructions
 * Next, `npm start`
 * View the page in the live server that opens
 
-## React Component Tree
+## 🌳 React Component Tree
 
 <img style="width: 30% height: 30%" src="./read-me-assets/TapHouseTree.png">
 
-## Known Bugs
+## 🐜 Known Bugs
 
 This application has no known bugs. 
 
-## Support and contact details
+## ☎️ Support and Contact Details
 
 Please feel free to reach out to me anytime at <tawneeh@icloud.com>
 
-## Technologies Used -- DOES THIS NEED TO BE UPDATED?
+## 💾 Technologies Used
 
 * React
 * JavaScript
@@ -53,4 +53,4 @@ Please feel free to reach out to me anytime at <tawneeh@icloud.com>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2021 **_Tawnee Harris_**
+Copyright (c) 2021 **_Tawnee Harris_** ⚖️
