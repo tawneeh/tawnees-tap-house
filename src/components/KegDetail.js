@@ -11,12 +11,14 @@ function KegDetail(props) {
       <h3>{keg.price}</h3>
       <h3>{keg.alcoholContent}</h3>
       <h3>{keg.pintsLeft}</h3>
+      <button onClick={ props.onClickingSold }>One Pint Sold</button>
     </>
   );
 }
 
 KegDetail.propTypes = {
-  keg: PropTypes.object
+  keg: PropTypes.object,
+  onClickingSold: PropTypes.func
 };
 
 export default KegDetail;
