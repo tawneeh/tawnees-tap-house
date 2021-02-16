@@ -26,7 +26,25 @@ class KegControl extends React.Component {
       }));
     }
   }
-    handleChangingSelectedKeg = (id) => {
+
+  handleSoldClick = () => {
+    console.log("handleSoldClick reached!");
+    // what needs to go here? 
+  }
+
+  handleSellingPint = () => {
+    const selectedKeg = this.state.selectedKeg; //selects keg that is currently selected and viewed in details page
+    const newQuantity = Object.assign({}, selectedKeg, {quantity: selectedKeg.quantity - 1}); //this targets the selectedItem and it's quantity, and assigns it the new quantity
+    const newKegList = this.state.masterKegList
+      .filter(keg => keg.id !== this.state.selectedKeg.id)
+      .concat(newQuantity); //updates the keg list
+    this.setState({
+      masterKegList: newKegList,
+      selectedKeg: newQuantity
+    });
+  }  
+
+  handleChangingSelectedKeg = (id) => {
     const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
     this.setState({selectedKeg: selectedKeg});
   }
@@ -37,12 +55,11 @@ class KegControl extends React.Component {
                   formVisibleOnPage: false});
   }
 
-
   render() {
     let currentVisibleState = null;
     let buttonText = null;
     if (this.state.selectedKeg != null) {
-      currentVisibleState = <KegDetail keg = {this.state.selectedKeg} />
+      currentVisibleState = <KegDetail keg = {this.state.selectedKeg} onClickingSold = {this.handleSoldClick} />
       buttonText = "Return to the Keg List";
     } else if (this.state.formVisibleOnPage) {
       currentVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />
