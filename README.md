@@ -21,7 +21,7 @@ Open by Downloading or Cloning
 * Or clone the repository
 
 Setup Instructions 
-* After the repository is on your computer, navigate to the terminal and type in `npm install --save-exact react-scripts@3.2.0`
+* After the repository is on your computer, navigate to the terminal and type in `npm install`
 * Next, `npm start`
 * View the page in the live server that opens
 
