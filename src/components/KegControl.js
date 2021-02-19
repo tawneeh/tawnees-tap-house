@@ -34,13 +34,17 @@ class KegControl extends React.Component {
   handleSellingPint = () => {
     const selectedKeg = this.state.selectedKeg;
     const newQuantity = Object.assign({}, selectedKeg, {pintsLeft: selectedKeg.pintsLeft - 1});
-    const newKegList = this.state.masterKegList
-      .filter(keg => keg.id !== this.state.selectedKeg.id)
-      .concat(newQuantity);
-    this.setState({
-      masterKegList: newKegList,
-      selectedKeg: newQuantity
-    });
+      if (selectedKeg.pintsLeft === 0) {
+        return;
+      } else {
+        const newKegList = this.state.masterKegList
+          .filter(keg => keg.id !== this.state.selectedKeg.id)
+          .concat(newQuantity);
+        this.setState({
+          masterKegList: newKegList,
+          selectedKeg: newQuantity
+        });
+      }
   }
 
   handleChangingSelectedKeg = (id) => {
